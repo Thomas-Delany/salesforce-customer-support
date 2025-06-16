@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Case Dashboard" icon-name="standard:case">
+        <div class="slds-p-horizontal_medium">
+
+            <!-- Filters -->
+            <lightning-combobox
+                name="status"
+                label="Filter by Status"
+                value={status}
+                options={statusOptions}
+                onchange={handleStatusChange}>
+            </lightning-combobox>
+
+            <lightning-combobox
+                name="category"
+                label="Filter by Category"
+                value={category}
+                options={categoryOptions}
+                onchange={handleCategoryChange}>
+            </lightning-combobox>
+
+            <!-- Case List -->
+            <template if:true={cases}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={cases}
+                    columns={columns}>
+                </lightning-datatable>
+            </template>
+
+            <template if:true={error}>
+                <p class="slds-text-color_error">{error}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
