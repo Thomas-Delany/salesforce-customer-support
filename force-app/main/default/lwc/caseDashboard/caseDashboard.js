@@ -1,9 +1,11 @@
-import { LightningElement, wire, track } from 'lwc';
+import { LightningElement, track } from 'lwc';
 import getCases from '@salesforce/apex/CaseController.getCases';
+import searchCases from '@salesforce/apex/CaseController.searchCases';
 
 export default class CaseDashboard extends LightningElement {
     @track status = '';
     @track category = '';
+    @track searchKey = '';
     @track cases = [];
     @track error;
 
@@ -41,6 +43,28 @@ export default class CaseDashboard extends LightningElement {
     handleCategoryChange(event) {
         this.category = event.detail.value;
         this.fetchCases();
+    }
+
+    handleSearchChange(event) {
+        this.searchKey = event.target.value;
+
+        if (this.searchKey.length > 2) {
+            this.searchCasesByKeyword();
+        } else if (this.searchKey.length === 0) {
+            this.fetchCases();
+        }
+    }
+
+    searchCasesByKeyword() {
+        searchCases({ searchKey: this.searchKey })
+            .then(result => {
+                this.cases = result;
+                this.error = undefined;
+            })
+            .catch(error => {
+                this.error = error.body.message;
+                this.cases = [];
+            });
     }
 
     fetchCases() {

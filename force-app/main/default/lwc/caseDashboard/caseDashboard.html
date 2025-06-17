@@ -2,6 +2,15 @@
     <lightning-card title="Case Dashboard" icon-name="standard:case">
         <div class="slds-p-horizontal_medium">
 
+            <!-- Search Bar -->
+            <lightning-input
+                type="search"
+                label="Search Cases"
+                value={searchKey}
+                onchange={handleSearchChange}
+                placeholder="Type to search...">
+            </lightning-input>
+
             <!-- Filters -->
             <lightning-combobox
                 name="status"
