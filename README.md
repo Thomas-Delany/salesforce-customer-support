@@ -24,7 +24,7 @@ In essence, this project is a simple, full-stack ticketing system that simulates
 - SOQL / SOSL (queries)
 - DML (data manipulation)
 - Salesforce REST API
-- Laravel (external integration)
+- Laravel (external integration which included blade directives, PHP, HTML, Bootstrap for styling, a controller file and a route)
 
 ## 🧱 Features
 
