@@ -33,8 +33,6 @@ In essence, this project is a simple, full-stack ticketing system that simulates
 - Apex logic for ticket assignment and notifications
 - Case search using SOSL
 
-## 📂 Project Structure
-
 Submit a ticket from either "anglossa.com/support" (English site) or "es.anglossa.com/support" (Spanish site) like this: 
 
 <img width="1802" height="793" alt="submit-ticket" src="https://github.com/user-attachments/assets/ee159b7f-56d3-4cd4-82a2-5f073c6bc143" />
