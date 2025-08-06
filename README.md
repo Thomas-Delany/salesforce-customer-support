@@ -39,4 +39,9 @@ Submit a ticket from either "anglossa.com/support" (English site) or "es.angloss
 
 <img width="1802" height="793" alt="submit-ticket" src="https://github.com/user-attachments/assets/ee159b7f-56d3-4cd4-82a2-5f073c6bc143" />
 
+A support agent who is logged into Salesforce can manage all the tickets that were submitted from the support ticket like so: 
+
+<img width="1872" height="842" alt="salesforce-ticket" src="https://github.com/user-attachments/assets/3062c079-e1c8-4b98-860f-2860ba8f29e1" />
+
+
 
