@@ -17,7 +17,7 @@ In essence, this project is a simple, full-stack ticketing system that simulates
 5. Agent → Responds, resolves, updates Case status
 
 
-## 🧩 Technologies Used
+## Technologies Used
 
 - Apex (backend logic)
 - Lightning Web Components (UI)
@@ -26,7 +26,7 @@ In essence, this project is a simple, full-stack ticketing system that simulates
 - Salesforce REST API
 - Laravel (external integration which included blade directives, PHP, HTML, Bootstrap for styling, a controller file and a route)
 
-## 🧱 Features
+## Features
 
 - REST API for external case submission
 - LWC dashboard to view and filter support tickets
